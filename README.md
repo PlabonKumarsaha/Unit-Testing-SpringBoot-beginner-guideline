@@ -41,8 +41,9 @@ The Junit4 library gets added by default if you are working on an older rereleas
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> 
 ```
+
 
 now while opening a new project `you should be given a separate directory to keep your test codes.So When you run your business code the test files will be ignored.`
 
@@ -65,7 +66,8 @@ now while opening a new project `you should be given a separate directory to kee
    public String returnSomething() {
    	return "Hello, World"; 
    	}
-	```
+	
+```
 
 ** Now let’s test the controller: **
 1.	Create a class as a test and annotate it with “@SpringBootTest”
