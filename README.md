@@ -47,7 +47,7 @@ The Junit4 library gets added by default if you are working on an older rereleas
 
 now while opening a new project `you should be given a separate directory to keep your test codes.So When you run your business code the test files will be ignored.`
 
-** must know annotations: **
+**must know annotations:**
 
 - @DisplayName – defines custom display name (in the testing console) for a test class or a test method
 - @BeforeEach – denotes that the annotated method will be executed before each and every test method (previously @Before in Junit4)
