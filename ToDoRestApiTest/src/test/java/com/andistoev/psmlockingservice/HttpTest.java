@@ -34,13 +34,6 @@ public class HttpTest {
 			assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/api/",
 					String.class)).contains("Hello, World");
 		} */
-	@Autowired
-	private MockMvc mockMvc;
 
-	@Test
-	public void shouldReturnDefaultMessage() throws Exception {
-		this.mockMvc.perform(get("/api/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello, World")));
-	}
 
 }

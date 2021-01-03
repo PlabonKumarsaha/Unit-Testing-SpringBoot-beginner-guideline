@@ -23,24 +23,33 @@ import com.teksoi.restapi.service.impl.ToDoServiceImpl;
 public class TestController {
 
 
-	@Autowired
-	private MockMvc mockMvc;
-	@MockBean
-	ToDoService toDoService;
-	ToDoServiceImpl toDoService2;
+//	@Autowired
+//	private MockMvc mockMvc;
+//	@MockBean
+//	ToDoService toDoService;
+//	ToDoServiceImpl toDoService2;
+//	  
+//	  @Test
+//	  public void testCOntrollerWithService() {
+//		  System.out.println(toDoService2.inToDoService);
+//		  
+//		  when(toDoService.greet()).thenReturn("Hello, World");
+//		  
+//		  try {
+//			this.mockMvc.perform(get("/api/greeting")).andDo(print()).andExpect(status().isOk())
+//			  .andExpect(content().string(containsString("Hello, World")));
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	  }
 	  
-	  @Test
-	  public void testCOntrollerWithService() {
-		  System.out.println(toDoService2.inToDoService);
-		  
-		  when(toDoService.greet()).thenReturn("Hello, World");
-		  
-		  try {
-			this.mockMvc.perform(get("/api/greeting")).andDo(print()).andExpect(status().isOk())
-			  .andExpect(content().string(containsString("Hello, World")));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		@Autowired
+		private MockMvc mockMvc;
+
+		@Test
+		public void shouldReturnDefaultMessage() throws Exception {
+			this.mockMvc.perform(get("/api/")).andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Hello, World")));
 		}
-	  }
 }

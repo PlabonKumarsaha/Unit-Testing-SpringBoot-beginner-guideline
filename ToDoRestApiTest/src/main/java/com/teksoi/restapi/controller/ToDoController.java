@@ -34,9 +34,9 @@ public class ToDoController {
 
     @PostMapping("/todo")
     @ResponseBody
-    public Response create(@RequestBody ToDoDto toDoDto, HttpServletResponse httpServletResponse, HttpServletRequest request) {
-        Response response = toDoService.create(toDoDto);
-        httpServletResponse.setStatus(response.getStatusCode());
+    public Long create(@RequestBody ToDoDto toDoDto, HttpServletResponse httpServletResponse, HttpServletRequest request) {
+    	Long response = toDoService.create(toDoDto);
+       // httpServletResponse.setStatus(response.getStatusCode());
         return response;
     }
 

@@ -13,18 +13,15 @@ import com.teksoi.restapi.service.ToDoService;
 @SpringBootTest
 public class CheckDefaultMessage {
 	
-	@Autowired
-	ToDoController toDoController;
+	
 	@MockBean
 	ToDoService toDoService; 
 	
 	  @Test
 	    public void contextLoads() throws Exception{
-	    	ToDoController toDoController = new ToDoController(toDoService);
-	    //	System.out.print("message : "+toDoController.toString());
+	    	ToDoController toDoController = new ToDoController(toDoService); 
 	    	assertThat(toDoController).isNotNull();
-	    	//System.out.println("hello");
-	    	//System.out.print(toDoController.test);    	  	
+	     	  	
 	    } 
 
 }

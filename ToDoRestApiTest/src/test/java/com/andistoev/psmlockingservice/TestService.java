@@ -21,6 +21,7 @@ public class TestService {
 //	ToDoService toDoService;
 	//@Autowired
 	//ModelMapper modelMapper;
+	
 	@Test
 	public void testCreate() {
 		//System.out.println(toDoRepository.finaltest);
@@ -29,7 +30,7 @@ public class TestService {
 		toDoDto.setId(1L);
 		toDoDto.setEventDate(null);	
 		toDoDto.setTitle("abc");
-		toDoDto.setDescription("sgajbdjadbad");
+		toDoDto.setDescription("this is something");
 		//toDoServiceImpl.
 		
 		ToDoService toDoServiceMock = mock(ToDoService.class);
