@@ -94,9 +94,9 @@ assertThat(toDoController).isNotNull();
 
 ### **Test CRUD Operation in spring**
 
-***Additional added dependency:***
-```
- <dependency>
+***Additional added dependency:*** This is a in memory dependency which helps to test the database <b>without changing the database</b>.It is used for running <b>integration test</b> cases for which you want to use <b>temporary data</b> instead of using actual data in your DB.
+
+``` <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>test</scope>
@@ -104,6 +104,7 @@ assertThat(toDoController).isNotNull();
 ```	
 
 **Going to do :**
+- [x] Repository Testing
 - [x] CRUD operation with spring JPA
 - [ ] Create Testing
 - [ ] Update Testing
