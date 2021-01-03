@@ -94,6 +94,15 @@ assertThat(toDoController).isNotNull();
 
 ### **Test CRUD Operation in spring**
 
+***Additional added dependency:***
+```
+ <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+```	
+
 **Going to do :**
 - [x] CRUD operation with spring JPA
 - [ ] Create Testing
@@ -101,6 +110,10 @@ assertThat(toDoController).isNotNull();
 - [ ] Update Testing
 - [ ] Delete testing
 - [ ] Controller testing
+
+### Repository Testing
+
+1.
 
 
 
