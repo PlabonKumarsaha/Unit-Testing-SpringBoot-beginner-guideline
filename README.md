@@ -94,6 +94,14 @@ assertThat(toDoController).isNotNull();
 
 ### **Test CRUD Operation in spring**
 
+**Going to do :**
+- [x] CRUD operation with spring JPA
+- [ ] Create Testing
+- [ ] Update Testing
+- [ ] Update Testing
+- [ ] Delete testing
+- [ ] Controller testing
+
 
 
 
