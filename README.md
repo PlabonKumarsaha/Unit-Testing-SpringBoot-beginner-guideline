@@ -57,3 +57,34 @@ now while opening a new project `you should be given a separate directory to kee
 
 
 
+### check the default controller message for controller testing
+** In the controller class : **
+```
+@RequestMapping("/")
+   @ResponseBody
+   public String returnSomething() {
+   	return "Hello, World"; 
+   	}
+	```
+
+** Now let’s test the controller: **
+1.	Create a class as a test and annotate it with “@SpringBootTest”
+2.	Autowire any dependent class if there is a dependency of it in the controller class(ex : in my case there is a dependency of service class in the controller class).
+3.	Create an instance of the controller class and pass the dependent object type.
+4.	If there is no such dependency ignore 2,3 and directly autowire the Controller class
+5.	Now check if the controller is not null first 
+Ex : 
+``` assertThat(toDoController).isNotNull(); ```
+6.	Then create an instace of MockMvc by autowiring
+7.	Now use this :
+```
+           @Test
+		public void shouldReturnDefaultMessage() throws Exception {
+			this.mockMvc.perform(get("/api/")).andDo(print()).andExpect(status().isOk())
+					.andExpect(content().string(containsString("Hello, World")));
+		}
+		```
+
+
+
+
