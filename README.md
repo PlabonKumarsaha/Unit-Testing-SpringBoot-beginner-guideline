@@ -1,4 +1,8 @@
 ## Unit-Testing- guidelines
+### This repo has : 
+- [x] Test on maven
+- [ ] Test on gradle
+
 
 ### The required dependencies in Pom file:
 
@@ -39,4 +43,6 @@ The Junit4 library gets added by default if you are working on an older rereleas
 			<scope>test</scope>
 		</dependency>
 ```
+
+
 
