@@ -59,7 +59,8 @@ now while opening a new project `you should be given a separate directory to kee
 
 
 ### check the default controller message for controller testing
-** In the controller class : **
+
+**In the controller class :**
 ```
 @RequestMapping("/")
    @ResponseBody
@@ -69,7 +70,7 @@ now while opening a new project `you should be given a separate directory to kee
 	
 ```
 
-** Now let’s test the controller: **
+**Now let’s test the controller:**
 1.	Create a class as a test and annotate it with “@SpringBootTest”
 2.	Autowire any dependent class if there is a dependency of it in the controller class(ex : in my case there is a dependency of service class in the controller class).
 3.	Create an instance of the controller class and pass the dependent object type.
