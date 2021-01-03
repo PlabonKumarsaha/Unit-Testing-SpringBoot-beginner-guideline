@@ -74,7 +74,8 @@ now while opening a new project `you should be given a separate directory to kee
 4.	If there is no such dependency ignore 2,3 and directly autowire the Controller class
 5.	Now check if the controller is not null first 
 Ex : 
-``` assertThat(toDoController).isNotNull(); ```
+``` assertThat(toDoController).isNotNull(); 
+```
 6.	Then create an instace of MockMvc by autowiring
 7.	Now use this :
 ```
