@@ -96,12 +96,22 @@ assertThat(toDoController).isNotNull();
 
 ***Additional added dependency:*** This is a in memory dependency which helps to test the database <b>without changing the database</b>.It is used for running <b>integration test</b> cases for which you want to use <b>temporary data</b> instead of using actual data in your DB.
 
-``` <dependency>
+```
+<dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>test</scope>
-        </dependency>
+</dependency>
 ```	
+**Add them in the properties file**
+
+```
+spring.datasource.url =jdbc:h2:mem:testdb
+spring.datasource.username= root
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+
+```
 
 **Going to do :**
 - [x] Repository Testing
