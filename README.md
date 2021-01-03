@@ -44,5 +44,5 @@ The Junit4 library gets added by default if you are working on an older rereleas
 		</dependency>
 ```
 
-
+now while opening a new project `you should be given a separate directory to keep your test codes.So When you run your business code the test files will be ignored.`
 
