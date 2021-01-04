@@ -70,8 +70,9 @@ now while opening a new project `you should be given a separate directory to kee
 - assertNotSame
 - assertArrayEquals
 
-### Console application test of a calculator's functions : 
-[calculator class](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/ConsoleAppTest/src/newTest/Calculator.java)
+### Example of Console application junit test of a calculator's functions : 
+
+[calculator class](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/ConsoleAppTest/src/newTest/Calculator.java) <br>
 [Test functions](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/ConsoleAppTest/src/newTest/CalculatorTest.java)
 
 
