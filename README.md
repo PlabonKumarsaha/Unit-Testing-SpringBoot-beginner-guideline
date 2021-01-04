@@ -166,6 +166,50 @@ spring.datasource.driver-class-name=org.h2.Driver
 ```
 8. Choose Run as test and see the output
 
+### **Hello world controller test**
+
+```
+@Controller
+public class HelloController { // the controller class
+
+	@RequestMapping("/")
+	public @ResponseBody String greeting() {
+		return "Hello, World";
+	}
+
+}
+```
+```
+@SpringBootTest //step1
+public class SmokeTest {
+
+	@Autowired
+	private HelloController controller; // step 2 : autowire the controller
+
+	@Test
+	public void contextLoads() throws Exception {
+		assertThat(controller).isNotNull(); //check if it is not null
+	}
+}
+```
+
+```
+@SpringBootTest
+@AutoConfigureMockMvc // step1
+public class TestingWebApplicationTest {
+
+	@Autowired
+	private MockMvc mockMvc;  // step2 : autwoiring mock
+
+	@Test
+	public void shouldReturnDefaultMessage() throws Exception {
+		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+				.andExpect(content().string(containsString("Hello, World")));  // step3
+	}
+}
+
+```
+
 ### **Service testing**
 
 
