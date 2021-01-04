@@ -57,6 +57,17 @@ now while opening a new project `you should be given a separate directory to kee
 - @Disable – it is used to disable a test class /method (previously @Ignore in junit4)
 
 
+**Must know annotations:** *[Examples](https://junit.org/junit5/docs/current/user-guide/)*
+ 
+
+- assertEquals - value checking
+- assertTrue - condition checking
+- assertThrows- For exception checking
+- assertNotNull
+- assertNotSame
+- assertArrayEquals
+
+
 
 ### Check the default controller message for controller testing
 
