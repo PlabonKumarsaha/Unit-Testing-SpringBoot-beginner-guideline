@@ -60,7 +60,7 @@ now while opening a new project `you should be given a separate directory to kee
 - @RepeatedTest - Repeates a test multiple time.
 
 
-**Must know annotations:** *[Examples](https://junit.org/junit5/docs/current/user-guide/)*
+**Must know annotations:** 
  
 
 - assertEquals - value checking
@@ -69,6 +69,8 @@ now while opening a new project `you should be given a separate directory to kee
 - assertNotNull
 - assertNotSame
 - assertArrayEquals
+
+Checkout the *[Examples](https://junit.org/junit5/docs/current/user-guide/)*
 
 ### Example of Console application junit test of a calculator's functions : 
 
