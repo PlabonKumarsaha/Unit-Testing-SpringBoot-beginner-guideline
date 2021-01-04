@@ -55,6 +55,9 @@ now while opening a new project `you should be given a separate directory to kee
 - @BeforeAll – denotes that the annotated method will be executed <b> before ALL</b> test methods in the current class (previously @BeforeClass in junit4)
 - @AfterAll – denotes that the annotated method will be executed <b> after ALL</b> test methods in the current class (previously @AfterClass in junit4)
 - @Disable – it is used to disable a test class /method (previously @Ignore in junit4)
+- @EnabledOnOs - look to run on only specific OS .The other OS will be disabled
+- @EnabledOnJre - looks to run on particular JRE versions of java
+- @RepeatedTest - Repeates a test multiple time.
 
 
 **Must know annotations:** *[Examples](https://junit.org/junit5/docs/current/user-guide/)*
@@ -67,6 +70,9 @@ now while opening a new project `you should be given a separate directory to kee
 - assertNotSame
 - assertArrayEquals
 
+### Console application test of a calculator's functions : 
+[calculator class](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/ConsoleAppTest/src/newTest/Calculator.java)
+[Test functions](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/ConsoleAppTest/src/newTest/CalculatorTest.java)
 
 
 ### Check the default controller message for controller testing
