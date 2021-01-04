@@ -145,8 +145,8 @@ spring.datasource.driver-class-name=org.h2.Driver
 
 ### Repository Testing
 
-1. Add @RunWith(SpringRunner.class) and @DataJpaTest on the class Name.
-2. Autowired the repository
+1. Add @RunWith(SpringRunner.class) and @DataJpaTest annotation on the class Name.
+2. Autowired the Repository class that `you want to test`
 3. Create a class instance for the enitity that the JpaRepository is extending(here User)
 4. Save the insance in h2 demo Database(save the user)
 5. Now test the user created JPA function : **findByLogin** which returns a User class
@@ -159,9 +159,9 @@ spring.datasource.driver-class-name=org.h2.Driver
         users.setLogin("test_login");
         usersRepository.save(users); // save in demo database
         //check the findByLogin method
-        Users foundUser = usersRepository.findByLogin(users.getLogin());
-        assertThat(foundUser).isNotNull(); //look if there is any null alue
-        assertThat(foundUser.getName()).isEqualTo(users.getName()); //compare the values of isnance and data query
+        Users findUser = usersRepository.findByLogin(users.getLogin());
+        assertThat(findUser).isNotNull(); //look if there is any null alue
+        assertThat(findUser.getName()).isEqualTo(users.getName()); //compare the values of isnance and data query
     
 ```
 8. Choose Run as test and see the output
