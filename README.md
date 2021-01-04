@@ -192,19 +192,18 @@ public class SmokeTest {
 	}
 }
 ```
-
+This will check if the value matches or not
 ```
-@SpringBootTest
-@AutoConfigureMockMvc // step1
-public class TestingWebApplicationTest {
+@WebMvcTest //step 1
+public class WebLayerTest {
 
 	@Autowired
-	private MockMvc mockMvc;  // step2 : autwoiring mock
+	private MockMvc mockMvc; //step2
 
 	@Test
 	public void shouldReturnDefaultMessage() throws Exception {
 		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello, World")));  // step3
+				.andExpect(content().string(containsString("Hello, World"))); //step3
 	}
 }
 
