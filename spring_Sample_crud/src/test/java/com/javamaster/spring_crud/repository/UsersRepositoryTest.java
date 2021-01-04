@@ -19,9 +19,15 @@ class UsersRepositoryTest {
 
     @Test
     void findByLogin() {
-        usersRepository.save(aUser());
-        Users foundUser = usersRepository.findByLogin(aUser().getLogin());
-        assertThat(foundUser).isNotNull();
-        assertThat(foundUser.getName()).isEqualTo(aUser().getName());
+
+        
+        Users users = new Users();
+        users.setName("test_name");
+        users.setLogin("test_login");
+        usersRepository.save(users); // save in demo database
+        //check the findByLogin method
+        Users findUser = usersRepository.findByLogin(users.getLogin());
+        assertThat(findUser).isNotNull(); //look if there is any null alue
+        assertThat(findUser.getName()).isEqualTo(users.getName()); //compare the values of isnance and data query
     }
 }
