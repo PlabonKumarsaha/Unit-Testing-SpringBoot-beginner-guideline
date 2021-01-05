@@ -5,6 +5,8 @@ import com.javamaster.spring_crud.exception.ValidationException;
 import com.javamaster.spring_crud.service.UsersService;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +19,7 @@ import java.util.List;
 @CrossOrigin
 public class UsersController {
 
+	@Autowired
     private final UsersService usersService;
 
     @PostMapping("/save")
