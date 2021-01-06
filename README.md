@@ -257,6 +257,17 @@ usersService = new DefaultUsersService(usersRepository, usersConverter);
 
 ```
 
+6. Test th service metho
+
+```
+ void findByLogin() {
+        when(usersRepository.findByLogin(eq("test_login"))).thenReturn(newUser);
+        UsersDto foundUser = usersService.findByLogin("test_login");
+        assertThat(foundUser).isNotNull();
+        assertThat(foundUser.getLogin()).isEqualTo("test_login");
+    }
+```
+
 
 
 
