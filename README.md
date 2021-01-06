@@ -212,6 +212,52 @@ public class WebLayerTest {
 ### **Service testing**
 in the Sample_crud project [Service](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/test/java/com/javamaster/spring_crud/service/DefaultUsersServiceTest.java) was tested like the following
 
+***The steps***
+
+1. Add the following snippets:
+```
+private UsersRepository usersRepository;
+private UsersService usersService;
+private UsersConverter usersConverter; // This helps to connect the class and DTO
+```
+
+2. Now Mock the UserRepository and create an isnatnce of DTO class
+```
+usersRepository = mock(UsersRepository.class);
+ usersConverter = new UsersConverter();
+```
+
+3. create the instance of service by passing the userRepository and userConverter as a parameter
+```
+usersService = new DefaultUsersService(usersRepository, usersConverter); 
+```
+
+4. Now `Let's check` the create service
+```
+ @Test
+    void saveUser() throws ValidationException {
+        when(usersRepository.save(any())).thenReturn(userDto); // mocks the save and checks the return value
+        UsersDto createdUser = usersService.saveUser(userDto); 
+        assertThat(createdUser).isNotNull(); //checks if the created user is null
+        assertThat(createdUser.getName()).isEqualTo(userDto.getName()); //comapre the given  value and gotten value from repo is same or mot
+    }
+```
+
+5. Excaeption checking
+
+```
+   @Test
+    void saveUserThrowsValidationExceptionWhenLoginIsNull() { //checks for exception
+        UsersDto usersDto = aUserDTO();
+        usersDto.setLogin("");
+        assertThrows(ValidationException.class,
+                () -> usersService.saveUser(usersDto),
+                "Login is empty");
+    }
+
+```
+
+
 
 
 
