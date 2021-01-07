@@ -137,11 +137,11 @@ spring.datasource.driver-class-name=org.h2.Driver
 **Going to do :**
 - [x] Repository Testing
 - [x] CRUD operation with spring JPA
-- [ ] Create Testing
-- [ ] Update Testing
-- [ ] Update Testing
-- [ ] Delete testing
-- [ ] Controller testing
+- [x] Check deafult message
+- [x] Service Testing
+- [x] Controller testing
+- [x] Repository testing
+
 
 ### Repository Testing
 
