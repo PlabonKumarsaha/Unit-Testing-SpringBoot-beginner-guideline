@@ -325,10 +325,10 @@ or not
 4. `Now try to understrand the following snippet and the comments`
 ```
 usersRepository.save(users); // save in mock demo database(H2 database)
-        //check the findByLogin method
         Users findUser = usersRepository.findByLogin(users.getLogin()); //Users findByLogin(String login); function was taken in the Repository class.
         assertThat(findUser).isNotNull(); //look if there is any null value
         assertThat(findUser.getName()).isEqualTo(users.getName()); //compare the values of isnance and data query
+
 ```
 
 
