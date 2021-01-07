@@ -300,7 +300,9 @@ MockMvc mockMvc;
  }
  ```
 ### **Repository testing**
-In the Sample_crud project `check the` [Repository](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/repository/UsersRepository.java) that was tested like the following manner 
+In the Sample_crud project `check the` [Repository](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/repository/UsersRepository.java) that was tested like the following manner .
+We will not be testing the framework defined functions such as save , update ,delete . We are checking if the user defined funstions are generating the correct output   
+or not
 
 1. add the following annotations on teh top of the class
 ```
@@ -324,8 +326,7 @@ In the Sample_crud project `check the` [Repository](https://github.com/PlabonKum
 ```
 usersRepository.save(users); // save in mock demo database(H2 database)
         //check the findByLogin method
-        Users findUser = usersRepository.findByLogin(users.getLogin()); //  Users findByLogin(String login); function was taken in the Repository class.
-	// we will not be testing the framework defined functions such as save , update ,delete . We are checking if the user defined funstions are generating the correct output     or not
+        Users findUser = usersRepository.findByLogin(users.getLogin()); //Users findByLogin(String login); function was taken in the Repository class.
         assertThat(findUser).isNotNull(); //look if there is any null value
         assertThat(findUser.getName()).isEqualTo(users.getName()); //compare the values of isnance and data query
 ```
