@@ -329,7 +329,6 @@ or not
         Users findUser = usersRepository.findByLogin(users.getLogin()); 
         assertThat(findUser).isNotNull(); //look if there is any null value
         assertThat(findUser.getName()).isEqualTo(users.getName()); //compare the values of isnance and data query
-	```
 
 
 
