@@ -279,12 +279,12 @@ in the Sample_crud project `check the` [Controller](https://github.com/PlabonKum
 @Autowired
 MockMvc mockMvc;
  ```
- 3. Autowire any class instance if it was used . ex: In this project ObjectMapper was used to to the DTO and class mapping.
+3. Autowire any class instance if it was used . ex: In this project ObjectMapper was used to to the DTO and class mapping.
  
- 4.Create a Mock bean of service insatnce
+4. Create a Mock bean of service insatnce
  ```
  @MockBean
-    UsersService usersService;
+ UsersService usersService;
  ```
  5. Now let's look at how does the create URL is hitten
  ```
@@ -297,7 +297,7 @@ MockMvc mockMvc;
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(objectMapper.writeValueAsString(userDto)));
-    }
+ }
  ```
 
 
