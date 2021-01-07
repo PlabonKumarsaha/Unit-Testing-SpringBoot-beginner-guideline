@@ -269,7 +269,7 @@ usersService = new DefaultUsersService(usersRepository, usersConverter);
 ```
 
 ### **Controller testing**
-in the Sample_crud project `check the` [Controller](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/controller/UsersController.javaa) that was tested like the following manner 
+in the Sample_crud project `check the` [Controller](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/controller/UsersController.java) that was tested like the following manner 
 
 **Steps**
 1.Add `@WebMvcTest(UsersController.class)` before the test class
@@ -299,6 +299,8 @@ MockMvc mockMvc;
                 .andExpect(content().json(objectMapper.writeValueAsString(userDto)));
  }
  ```
+### **Repository testing**
+In the Sample_crud project `check the` [Repository](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/repository/UsersRepository.java) that was tested like the following manner 
 
 
 
