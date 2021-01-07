@@ -269,7 +269,36 @@ usersService = new DefaultUsersService(usersRepository, usersConverter);
 ```
 
 ### **Controller testing**
-in the Sample_crud project `check the` [Controller](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/controller/UsersController.javaa) that was tested like the following manner :
+in the Sample_crud project `check the` [Controller](https://github.com/PlabonKumarsaha/Unit-Testing-SpringBoot-beginner-guideline/blob/main/spring_Sample_crud/src/main/java/com/javamaster/spring_crud/controller/UsersController.javaa) that was tested like the following manner 
+
+**Steps**
+1.Add `@WebMvcTest(UsersController.class)` before the test class
+
+2. Mock the MockMvc
+```
+@Autowired
+MockMvc mockMvc;
+ ```
+ 3. Autowire any class instance if it was used . ex: In this project ObjectMapper was used to to the DTO and class mapping.
+ 
+ 4.Create a Mock bean of service insatnce
+ ```
+ @MockBean
+    UsersService usersService;
+ ```
+ 5. Now let's look at how does the create URL is hitten
+ ```
+     @Test
+    void saveUsers() throws Exception {
+        when(usersService.saveUser(any())).thenReturn(userDto); // mocking the service and schecks if it returns a DTO
+        mockMvc.perform(post("/users/save") //mocks the Controller path
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(userDto)))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(content().json(objectMapper.writeValueAsString(userDto)));
+    }
+ ```
 
 
 
