@@ -26,7 +26,6 @@ class UsersRepositoryTest {
     
     @Test
     void findByLogin() {
-
         
         Users users = new Users();
         users.setId(1);
