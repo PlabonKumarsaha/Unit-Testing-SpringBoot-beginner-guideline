@@ -257,14 +257,14 @@ usersService = new DefaultUsersService(usersRepository, usersConverter);
 
 ```
 
-6. Test th service metho
+6. Test the service method
 
 ```
  void findByLogin() {
-        when(usersRepository.findByLogin(eq("test_login"))).thenReturn(newUser);
-        UsersDto foundUser = usersService.findByLogin("test_login");
-        assertThat(foundUser).isNotNull();
-        assertThat(foundUser.getLogin()).isEqualTo("test_login");
+        when(usersRepository.findByLogin(eq("test_login"))).thenReturn(newUser); // when mocks the repository and 
+        UsersDto foundUser = usersService.findByLogin("test_login"); // tries to find the user and stores it in a DTO instance
+        assertThat(foundUser).isNotNull(); // checks if the value is found
+        assertThat(foundUser.getLogin()).isEqualTo("test_login"); // check if the value is correct or not
     }
 ```
 
