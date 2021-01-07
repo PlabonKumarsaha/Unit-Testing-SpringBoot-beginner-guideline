@@ -321,7 +321,7 @@ or not
         users.setId(1);
         users.setName("test_name");
         users.setLogin("test_login");
-	```
+
 4. `Now try to understrand the following snippet and the comments`
 ```
         usersRepository.save(users); // save in mock demo database(H2 database)
