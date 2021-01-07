@@ -323,7 +323,7 @@ or not
         users.setLogin("test_login");
 	```
 
-4. `Now try to understrand the following snippet and the comments`
+4. ` Now try to understrand the following snippet and the comments `
 
 ```
         usersRepository.save(users); // save in mock demo database(H2 database)
