@@ -5,6 +5,8 @@ import com.javamaster.spring_crud.exception.ValidationException;
 import com.javamaster.spring_crud.repository.UsersRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static com.javamaster.spring_crud.prototype.UsersPrototype.aUser;
 import static com.javamaster.spring_crud.prototype.UsersPrototype.aUserDTO;
@@ -15,10 +17,13 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+
 class DefaultUsersServiceTest {
 
     private UsersRepository usersRepository;
+   // @Autowired
     private UsersConverter usersConverter;
+    //@MockBean
     private UsersService usersService;
 
     @BeforeEach
