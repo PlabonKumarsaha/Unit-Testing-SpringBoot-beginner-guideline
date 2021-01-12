@@ -74,8 +74,8 @@ now while opening a new project `you should be given a separate directory to kee
 
 Assumptions is a collection of utility methods that support conditional test execution based on assumptions.Assumptions are typically used whenever it does not make sense to continue execution of a given test method — for example, if the test depends on something that does not exist in the current runtime environment.
 
--assumeFalse
--assumeTrue
+- assumeFalse
+- assumeTrue
 
 Checkout the *[Examples](https://junit.org/junit5/docs/current/user-guide/)*
 
