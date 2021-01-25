@@ -1,4 +1,12 @@
 ## Unit-Testing- guidelines
+
+## Demos :
+- Conole app unit testing : ConsoleAppTest
+- CRUD API unit testing - spring_Sample_crud
+
+## Template for practice
+- ToDoRestApiTest
+
 ### This repo has : 
 - [x] Test on maven
 - [ ] Test on gradle
