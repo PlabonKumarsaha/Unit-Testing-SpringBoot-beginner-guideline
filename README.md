@@ -352,6 +352,8 @@ or not
 	
 	advance stuff : https://www.baeldung.com/parameterized-tests-junit-5
 
+5. additional info : https://www.petrikainulainen.net/programming/spring-framework/integration-testing-of-spring-mvc-applications-write-clean-assertions-with-jsonpath/
+
 
 
 
